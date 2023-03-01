@@ -130,7 +130,8 @@ resource "azurerm_linux_virtual_machine" "catapp" {
 
   }
 
-  tags = {department="devops"}
+  tags = {department="devops"
+  Billable="True"}
 
   # Added to allow destroy to work correctly.
   depends_on = [azurerm_network_interface_security_group_association.catapp-nic-sg-ass]
